@@ -49,20 +49,33 @@ const ExclusiveService = () => {
         </Stack>
 
         {/* Image */}
-       <Box
-  borderRadius="lg"
-  boxSize="lg"
-  overflow="hidden"
-  mb={12}
-  mx="auto"
->
-  <Image
-    src="/src/assets/images/meeting.jpg"
-    w="100%"
-    h="100%"
-    objectFit="cover"
-  />
-</Box>      
+      <Flex justify="center" gap={6} mb={12}>
+  <Box borderRadius="lg" overflow="hidden" maxW="400px">
+    <Image
+      src="/src/assets/images/meeting.jpg"
+      w="100%"
+      h="100%"
+      objectFit="cover"
+    />
+  </Box>
+
+  <Box borderRadius="lg" overflow="hidden" maxW="400px">
+    <Image
+      src="/src/assets/images/meeting1.png"
+      w="100%"
+      h="100%"
+      objectFit="cover"
+    />
+  </Box>
+    <Box borderRadius="lg" overflow="hidden" maxW="450px">
+    <Image
+      src="/src/assets/images/meeting2.jpg"
+      w="100%"
+      h="100%"
+      objectFit="cover"
+    />
+  </Box>
+</Flex>   
 
         {/* Features */}
         <SimpleGrid columns={[1, 1, 3]} gap={10}>
