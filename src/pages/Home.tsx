@@ -1,4 +1,5 @@
 import { Box, Heading, Text, Button, Stack, Flex } from "@chakra-ui/react";
+import StepCount from "../components/StepCount";
 
 const Home = () => {
   return (
@@ -51,6 +52,7 @@ const Home = () => {
           </Flex>
         </Stack>
       </Flex>
+      <StepCount /> 
 
     </Box>
   );
