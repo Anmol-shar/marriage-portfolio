@@ -8,21 +8,26 @@ const Navbar = () => {
         <Heading size="md">Marriage Portfolio</Heading>
 
         <Flex gap={4}>
-          <Button as={Link}   variant="ghost" color="white">
-            Home
-          </Button>
-          <Button as={Link}  variant="ghost" color="white">
-            About
-          </Button>
-          <Button as={Link}   variant="ghost" color="white">
-            Boys
-          </Button>
-          <Button as={Link}   variant="ghost" color="white">
-            Girls
-          </Button>
-          <Button as={Link}   variant="ghost" color="white">
-            Contact
-          </Button>
+           <Link to="/">
+  <Button variant="ghost" color="white">
+    Home
+  </Button>
+</Link>
+         <Link to="/about">
+  <Button variant="ghost" color="white">About</Button>
+</Link>
+
+<Link to="/boys">
+  <Button variant="ghost" color="white">Boys</Button>
+</Link>
+
+<Link to="/girls">
+  <Button variant="ghost" color="white">Girls</Button>
+</Link>
+
+<Link to="/contact">
+  <Button variant="ghost" color="white">Contact</Button>
+</Link>
         </Flex>
       </Flex>
     </Box>
