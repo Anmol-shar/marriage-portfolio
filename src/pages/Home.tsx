@@ -1,5 +1,6 @@
 import { Box, Heading, Text, Button, Stack, Flex } from "@chakra-ui/react";
 import StepCount from "../components/StepCount";
+import ExclusiveService from "../components/ExclusiveService";
 
 const Home = () => {
   return (
@@ -53,6 +54,8 @@ const Home = () => {
         </Stack>
       </Flex>
       <StepCount /> 
+            <ExclusiveService />
+
 
     </Box>
   );
