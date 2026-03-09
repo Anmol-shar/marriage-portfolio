@@ -2,6 +2,7 @@ import { Box, Heading, Text, Button, Stack, Flex } from "@chakra-ui/react";
 import StepCount from "../components/StepCount";
 import ExclusiveService from "../components/ExclusiveService";
 import HappyCouples from "../components/HappyCouples";
+import WhyChooseUs from "../components/WhyChooseUs";
 
 const Home = () => {
   return (
@@ -56,7 +57,8 @@ const Home = () => {
 
 
     </Box><StepCount /><ExclusiveService />
-    <HappyCouples/></>
+    <HappyCouples/>
+    <WhyChooseUs/></>
   );
 };
 
