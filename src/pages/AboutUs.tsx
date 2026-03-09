@@ -24,7 +24,7 @@ const AboutUs = () => {
 
           <Box flex="1">
             <Image
-              src="https://images.unsplash.com/photo-1580489944761-15a19d654956"
+              src="/src/assets/images/CEO.jpeg"
               borderRadius="lg"
               shadow="xl"
               w="100%"

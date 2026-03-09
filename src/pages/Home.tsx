@@ -1,26 +1,26 @@
 import { Box, Heading, Text, Button, Stack, Flex } from "@chakra-ui/react";
 import StepCount from "../components/StepCount";
 import ExclusiveService from "../components/ExclusiveService";
+import HappyCouples from "../components/HappyCouples";
 
 const Home = () => {
   return (
-    <Box
+    <><Box
       h="90vh"
       w="100%"
       bgImage="url('https://images.unsplash.com/photo-1522673607200-164d1b6ce486')"
       bgSize="cover"
       position="sticky"
-    
+
     >
 
       {/* Dark Overlay */}
       <Box
         position="absolute"
-         
+
         w="100%"
         h="100%"
-        bg="blackAlpha.600" 
-      />
+        bg="blackAlpha.600" />
 
       {/* Content */}
       <Flex
@@ -32,7 +32,7 @@ const Home = () => {
         color="white"
         px={4}
       >
-        <Stack gap={6} >
+        <Stack gap={6}>
           <Heading size="5xl" fontWeight="bold">
             Find Your Perfect Life Partner
           </Heading>
@@ -43,7 +43,7 @@ const Home = () => {
           </Text>
 
           <Flex gap={4} justify="center">
-            <Button    size="lg">
+            <Button size="lg">
               View Profiles
             </Button>
 
@@ -53,11 +53,10 @@ const Home = () => {
           </Flex>
         </Stack>
       </Flex>
-      <StepCount /> 
-            <ExclusiveService />
 
 
-    </Box>
+    </Box><StepCount /><ExclusiveService />
+    <HappyCouples/></>
   );
 };
 
