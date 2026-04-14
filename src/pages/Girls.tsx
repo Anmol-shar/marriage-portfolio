@@ -11,15 +11,64 @@ const Girls = () => {
           name="Priya Verma"
           age={26}
           profession="Teacher"
-          image="https://randomuser.me/api/portraits/women/1.jpg"
+          image="/src/assets/images/Girls/Ashtha.jpeg"
         />
 
         <ProfileCard
           name="Sneha Gupta"
           age={27}
           profession="Doctor"
-          image="https://randomuser.me/api/portraits/women/2.jpg"
+          image="/src/assets/images/Girls/Deepshika_Goel.jpeg"
         />
+        <ProfileCard
+          name="Sneha Gupta"
+          age={27}
+          profession="Doctor"
+          image="/src/assets/images/Girls/Girl1.jpeg"
+        />
+        <ProfileCard
+          name="Sneha Gupta"
+          age={27}
+          profession="Doctor"
+          image="/src/assets/images/Girls/Harshita_Singhal.jpeg"
+        />
+        <ProfileCard
+          name="Sneha Gupta"
+          age={27}
+          profession="Doctor"
+          image="/src/assets/images/Girls/Ignit_Goel.jpeg"
+        />
+        <ProfileCard
+          name="Sneha Gupta"
+          age={27}
+          profession="Doctor"
+          image="/src/assets/images/Girls/Kajal_Mittal.jpeg"
+        />
+        <ProfileCard
+          name="Sneha Gupta"
+          age={27}
+          profession="Doctor"
+          image="/src/assets/images/Girls/Mirdula Mittal.jpeg"
+        />
+        <ProfileCard
+          name="Sneha Gupta"
+          age={27}
+          profession="Doctor"
+          image="/src/assets/images/Girls/Muskan.jpeg"
+        />
+        <ProfileCard
+          name="Sneha Gupta"
+          age={27}
+          profession="Doctor"
+          image="/src/assets/images/Girls/Nikita_Gupta.jpeg"
+        />
+        <ProfileCard
+          name="Sneha Gupta"
+          age={27}
+          profession="Doctor"
+          image="/src/assets/images/Girls/Radha_Gupta.jpeg"
+        />
+        
       </SimpleGrid>
     </Box>
   );
