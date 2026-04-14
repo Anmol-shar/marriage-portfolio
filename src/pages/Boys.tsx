@@ -11,14 +11,14 @@ const Boys = () => {
           name="Rahul Sharma"
           age={28}
           profession="Software Engineer"
-          image="https://randomuser.me/api/portraits/men/1.jpg"
+          image="/src/assets/images/Boys/Abhishek_Goel.jpeg"
         />
 
         <ProfileCard
           name="Amit Kumar"
           age={30}
           profession="Businessman"
-          image="https://randomuser.me/api/portraits/men/2.jpg"
+          image="/src/assets/images/Boys/Akhil_Garg.jpeg"
         />
       </SimpleGrid>
     </Box>

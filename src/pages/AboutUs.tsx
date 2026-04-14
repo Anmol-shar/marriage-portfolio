@@ -15,8 +15,11 @@ const AboutUs = () => {
 
       {/* Founder Section */}
 
-      <Container maxW="container.xl" py={20}>
+      <Container maxW="container.xl">
+          <Heading  textAlign="center" fontWeight="bold" fontSize="5xl" p={7}>About Us</Heading>
+
         <Flex
+        py="1rem"
           align="center"
           gap={10}
           direction={["column", "column", "row"]}
@@ -35,9 +38,9 @@ const AboutUs = () => {
 
           <Box flex="1">
             <Stack gap={5}>
-              <Heading color="pink.500">
+              <Heading color="pink.500" >
                 Meet Our Founder
-              </Heading>
+              </Heading>  
 
               <Heading size="lg">Abha Sharma</Heading>
 
