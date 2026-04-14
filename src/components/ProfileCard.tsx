@@ -20,7 +20,7 @@ const ProfileCard = ({ name, age, profession, image }: Props) => {
       <Image
         src={image}
         borderRadius="full"
-        boxSize="200px"
+        boxSize="200px "
         mx="auto"
       />
 
