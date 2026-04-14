@@ -6,7 +6,6 @@ import {
   Stack,
   Image,
   SimpleGrid,
-  Badge,
   Flex,
   Icon
 } from "@chakra-ui/react";
@@ -22,37 +21,28 @@ const ExclusiveService = () => {
         {/* Heading */}
         <Stack align="center" gap={3} mb={10}>
           <Text
-            fontSize="sm"
-            fontWeight="bold"
+            fontSize="4xl" fontWeight="bold" 
             letterSpacing="wide"
             color="gray.500"
           >
             PERSONALISED MATCH-MAKING SERVICE
           </Text>
 
-          <Heading textAlign="center">
+          <Heading textAlign="center"fontSize="2xl" fontWeight="bold" >
             Introducing{" "}
             <Text as="span" color="pink.500">
               Exclusive
             </Text>
           </Heading>
 
-          <Badge
-            colorScheme="pink"
-            px={4}
-            py={1}
-            borderRadius="md"
-            fontSize="sm"
-          >
-            EXCLUSIVE
-          </Badge>
+      
         </Stack>
 
         {/* Image */}
       <Flex justify="center" gap={6} mb={12}>
   <Box borderRadius="lg" overflow="hidden" maxW="400px">
     <Image
-      src="/src/assets/images/meeting.jpg"
+      src="/src/assets/images/meeting/meeting.jpg"
       w="100%"
       h="100%"
       objectFit="cover"
@@ -61,7 +51,7 @@ const ExclusiveService = () => {
 
   <Box borderRadius="lg" overflow="hidden" maxW="400px">
     <Image
-      src="/src/assets/images/meeting1.png"
+      src="/src/assets/images/meeting/meeting1.png"
       w="100%"
       h="100%"
       objectFit="cover"
@@ -69,7 +59,7 @@ const ExclusiveService = () => {
   </Box>
     <Box borderRadius="lg" overflow="hidden" maxW="450px">
     <Image
-      src="/src/assets/images/meeting2.jpg"
+      src="/src/assets/images/meeting/meeting2.jpg"
       w="100%"
       h="100%"
       objectFit="cover"

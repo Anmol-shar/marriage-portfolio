@@ -4,7 +4,7 @@ import { FaUserCheck, FaHeart, FaShieldAlt, FaHandshake } from "react-icons/fa";
 const WhyChooseUs = () => {
   return (
     <Box py={20} bg="white">
-      <Heading textAlign="center" mb={12}>
+      <Heading textAlign="center" fontSize="5xl" fontWeight="bold"  mb={12}>
         Why Choose Us
       </Heading>
 

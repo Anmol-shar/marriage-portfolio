@@ -13,17 +13,17 @@ const steps = [
   {
     id: "01",
     title: "Define Your Partner Preferences",
-    img: "/src/assets/images/procees1.png"
+    img: "/src/assets/images/process/procees1.png"
   },
   {
     id: "02",
     title: "Browse Profiles",
-    img: "/src/assets/images/process2.png"
+    img: "/src/assets/images/process/process2.png"
   },
   {
     id: "03",
     title: "Send Interests & Connect",
-    img: "/src/assets/images/process3.png"
+    img: "/src/assets/images/process/process3.png"
   }
 ];
 
@@ -35,7 +35,7 @@ const StepsSection = () => {
 
         <Stack gap={4} textAlign="center" mb={12}>
           <Text
-            fontSize="3xl"
+            fontSize="5xl"  
             color="pink.500"
             fontWeight="bold"
           >
