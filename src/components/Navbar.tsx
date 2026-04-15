@@ -17,23 +17,23 @@ const Navbar = () => {
 
         <Flex gap={4}>
           <Link to="/">
-            <Button variant="ghost" color="white">Home</Button>
+            <Button bgColor="pink.500" _hover={{ textDecoration: "underline" }} color="white">Home</Button>
           </Link>
 
           <Link to="/about">
-            <Button variant="ghost" color="white">About</Button>
+            <Button bgColor="pink.500" _hover={{ textDecoration: "underline" }} variant="ghost" color="white">About Us</Button>
           </Link>
 
           <Link to="/boys">
-            <Button variant="ghost" color="white">Boys</Button>
+            <Button bgColor="pink.500" _hover={{ textDecoration: "underline" }} variant="ghost" color="white">Boys</Button>
           </Link>
 
           <Link to="/girls">
-            <Button variant="ghost" color="white">Girls</Button>
+            <Button bgColor="pink.500" _hover={{ textDecoration: "underline" }} variant="ghost" color="white">Girls</Button>
           </Link>
 
           <Link to="/contact">
-            <Button variant="ghost" color="white">Contact</Button>
+            <Button bgColor="pink.500" _hover={{ textDecoration: "underline" }} variant="ghost" color="white">Contact Us</Button>
           </Link>
         </Flex>
       </Flex>
