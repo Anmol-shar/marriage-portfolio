@@ -9,14 +9,70 @@ import {
   Text,
   InputGroup,
   Stack,
-  Icon
+  Icon,
+  Image,  
+  Flex
 } from "@chakra-ui/react";
-import { FaPhone, FaEnvelope, FaUser, FaMapMarkerAlt } from "react-icons/fa";
+import { FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 
 const Contact = () => {
   return (
     <Box>
+<Box position="relative" w="100%" h={{ base: "60vh", md: "60vh" }}>
+        
+        <Image
+          src="/src/assets/images/meeting/aboutUs.jpg" // change image if needed
+          w="100%"
+          h="100%"
+          objectFit="cover"
+        />
 
+        {/* Overlay */}
+        <Box
+          position="absolute"
+          top="0"
+          left="0"
+          w="100%"
+          h="100%"
+          bg="blackAlpha.400"
+        />
+
+        {/* Centered Text */}
+     <Flex
+  position="absolute"
+  top="0"
+  left="0"
+  w="100%"
+  h="100%"
+  align="center"
+  justify="center"
+>
+  <Stack align="center" w={{base:"80%",lg:"40%"}} gap={{base:3,lg:7}}>
+    <Heading
+      color="white"
+      fontSize={{ base: "4xl", md: "3xl", lg: "6xl" }}
+      fontWeight="bold"
+    >
+      Contact Us
+    </Heading>
+<Heading 
+ color="white"
+      fontSize={{ base: "sm", md: "2xl", lg: "xl" }}
+      fontWeight="bold">
+  We’d Love to Hear From You
+</Heading>
+    <Text
+      color="gray.200"
+      fontSize={{ base: "sm", md: "lg" }}
+      fontStyle="italic"
+      textAlign="center"
+      
+    >
+     We value your feedback. Reach out and let us know how we can help.
+    </Text>
+  </Stack>
+</Flex>
+      </Box>
       {/* 🔥 Top Info Section */}
       <Box bg="gray.100" py={{ base: 10, md: 16 }} px={4} textAlign="center">
 
@@ -57,7 +113,7 @@ const Contact = () => {
             transition="0.3s"
           >
             <Stack align="center" gap={4}>
-              <Icon as={FaMapMarkerAlt} boxSize={10} color="blue.900" />
+              <Icon as={FaMapMarkerAlt} boxSize={50} color="blue.900" />
 
               <Heading size="lg" color="blue.900">
                 Address
@@ -79,7 +135,7 @@ const Contact = () => {
             transition="0.3s"
           >
             <Stack align="center" gap={4}>
-              <Icon as={FaEnvelope} boxSize={10} color="blue.900" />
+              <Icon as={FaEnvelope} boxSize={50} color="blue.900" />
 
               <Heading size="lg" color="blue.900">
                 Email
@@ -111,7 +167,7 @@ const Contact = () => {
           >
             <VStack gap={5} align="stretch">
               
-              <Text fontSize="4xl"  textAlign="center" fontWeight="bold" color="gray.600">
+              <Text fontSize={{base:"2xl",lg:"4xl"}}  textAlign="center" fontWeight="bold" color="gray.600">
 Free Consulting              </Text>
 
               <InputGroup>

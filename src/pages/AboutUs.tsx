@@ -14,7 +14,7 @@ const AboutUs = () => {
     <Box>
 
       {/* ✅ Hero Section */}
-      <Box position="relative" w="100%" h={{ base: "40vh", md: "60vh" }}>
+      <Box position="relative" w="100%" h={{ base: "60vh", md: "60vh" }}>
         
         <Image
           src="/src/assets/images/meeting/aboutUs.jpg" // change image if needed
@@ -43,7 +43,7 @@ const AboutUs = () => {
   align="center"
   justify="center"
 >
-  <Stack align="center" gap={3}>
+  <Stack align="center" gap={{base:3,lg:7}} w={{base:"80%",lg:"40%"}}>
     <Heading
       color="white"
       fontSize={{ base: "3xl", md: "5xl", lg: "6xl" }}
@@ -52,14 +52,26 @@ const AboutUs = () => {
       About Us
     </Heading>
 
-    <Text
+    <Heading
+      color="gray.200"
+            fontSize={{ base: "sm", md: "2xl", lg: "xl" }}
+textAlign="center"
+      fontWeight="bold"
+    >
+      Your Trusted Partner in Innovation
+    </Heading>
+ <Text
       color="gray.200"
       fontSize={{ base: "sm", md: "lg" }}
       fontStyle="italic"
-      mt="1rem"
+      textAlign="center"
+
+      
     >
-      Your Trusted Partner in Innovation
+         We empower innovation, delivering tailored solutions with passion, expertise and a commitment to excellence.
+
     </Text>
+    
   </Stack>
 </Flex>
       </Box>
