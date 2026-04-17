@@ -8,88 +8,163 @@ import {
   SimpleGrid,
   Text,
   InputGroup,
+  Stack,
+  Icon
 } from "@chakra-ui/react";
-import { FaPhone, FaEnvelope, FaUser } from "react-icons/fa";
+import { FaPhone, FaEnvelope, FaUser, FaMapMarkerAlt } from "react-icons/fa";
 
 const Contact = () => {
   return (
-    <Box bg="gray.50" py={16} px={[4, 6, 10]}>
-      <Heading
-        mb={12}
-        fontSize={["3xl", "4xl", "5xl"]}
-        fontWeight="bold"
-        textAlign="center"
-        color="gray.700"
-      >
-        Contact Us
-      </Heading>
+    <Box>
 
-      <SimpleGrid columns={[1, 1, 2]} gap={10} maxW="90%" mx="auto">
+      {/* 🔥 Top Info Section */}
+      <Box bg="gray.100" py={{ base: 10, md: 16 }} px={4} textAlign="center">
+
+        <Heading
+          fontSize={{ base: "3xl", md: "5xl" }}
+          fontWeight="bold"
+          color="blue.900"
+        >
+          Get in touch
+        </Heading>
+
+        <Text
+          mt={4}
+          fontSize={{ base: "sm", md: "lg" }}
+          color="gray.600"
+          maxW="600px"
+          mx="auto"
+          fontStyle="italic"
+        >
+          Reach out to discover how we can transform your ideas into reality.
+        </Text>
+
+        <SimpleGrid
+          columns={{ base: 1, md: 2 }}
+          gap={8}
+          mt={12}
+          maxW="800px"
+          mx="auto"
+        >
+
+          {/* Address Card */}
+          <Box
+            bg="white"
+            p={8}
+            borderRadius="2xl"
+            boxShadow="md"
+            _hover={{ boxShadow: "xl", transform: "translateY(-5px)" }}
+            transition="0.3s"
+          >
+            <Stack align="center" gap={4}>
+              <Icon as={FaMapMarkerAlt} boxSize={10} color="blue.900" />
+
+              <Heading size="lg" color="blue.900">
+                Address
+              </Heading>
+
+              <Text color="gray.600" textAlign="center">
+                Altruist Citi Plaza 2nd Floor, Ambala City
+              </Text>
+            </Stack>
+          </Box>
+
+          {/* Email Card */}
+          <Box
+            bg="white"
+            p={8}
+            borderRadius="2xl"
+            boxShadow="md"
+            _hover={{ boxShadow: "xl", transform: "translateY(-5px)" }}
+            transition="0.3s"
+          >
+            <Stack align="center" gap={4}>
+              <Icon as={FaEnvelope} boxSize={10} color="blue.900" />
+
+              <Heading size="lg" color="blue.900">
+                Email
+              </Heading>
+
+              <Text color="gray.600">
+                abha01sharma01@gmail.com
+              </Text>
+            </Stack>
+          </Box>
+
+        </SimpleGrid>
+      </Box>
+
+
+      {/* 🔥 Contact Form + Map */}
+      <Box bg="gray.50" py={16} px={[4, 6, 10]}>
         
-        {/* Contact Form */}
-        <Box
-          bg="white"
-          p={8}
-          borderRadius="2xl"
-          boxShadow="lg"
-          _hover={{ boxShadow: "2xl" }}
-          transition="0.3s"
-        >
-          <VStack gap={5} align="stretch">
-            <Text fontSize="lg" fontWeight="semibold" color="gray.600">
-              Get in touch
-            </Text>
+        <SimpleGrid columns={[1, 1, 2]} gap={10} maxW="90%" mx="auto">
+          
+          {/* Form */}
+          <Box
+            bg="white"
+            p={8}
+            borderRadius="2xl"
+            boxShadow="lg"
+            _hover={{ boxShadow: "2xl" }}
+            transition="0.3s"
+          >
+            <VStack gap={5} align="stretch">
+              
+              <Text fontSize="4xl"  textAlign="center" fontWeight="bold" color="gray.600">
+Free Consulting              </Text>
 
-           
+              <InputGroup>
+                <Input placeholder="Your Name" />
+              </InputGroup>
 
-             
-              <InputGroup startElement={<FaUser />}  >
-      <Input placeholder="Your Name"   border="pink.400" />
-    </InputGroup>
-              <InputGroup startElement={<FaPhone />}  >
-      <Input placeholder="Contact Number" border="pink.400" />
-    </InputGroup>
-              <InputGroup startElement={<FaEnvelope />}>
-      <Input placeholder="Email Address" />
-    </InputGroup>
+              <InputGroup>
+                <Input placeholder="Contact Number" />
+              </InputGroup>
 
-            <Textarea
-              placeholder="Your Message..."
-              border="pink.400"
-              rows={5}
-            />
+              <InputGroup>
+                <Input placeholder="Email Address" />
+              </InputGroup>
 
-            <Button
-              colorScheme="pink"
-              bgColor="pink.500"
-              size="lg"
-              borderRadius="full"
-              _hover={{ transform: "scale(1.05)" }}
-              transition="0.2s"
-            >
-              Send Message
-            </Button>
-          </VStack>
-        </Box>
+              <Textarea
+                placeholder="Your Message..."
+                rows={5}
+              />
 
-        {/* Google Map */}
-        <Box
-          borderRadius="2xl"
-          overflow="hidden"
-          boxShadow="lg"
-          _hover={{ boxShadow: "2xl" }}
-          transition="0.3s"
-        >
-          <iframe
-            title="location"
-            src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3474.16813427947!2d77.72128969430926!3d29.453100315513385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1ssurendra%20nagar%202nd%20phase%20muzaffarnagar!5e0!3m2!1sen!2sin!4v1773060295469!5m2!1sen!2sin"
-            width="100%"
-            height="100%"
-            style={{ border: 0, minHeight: "400px" }}
-            loading="lazy"
-          ></iframe>
-        </Box>
-      </SimpleGrid>
+              <Button
+                colorScheme="pink"
+                size="lg"
+                borderRadius="full"
+                _hover={{ transform: "scale(1.05)" }}
+                transition="0.2s"
+              >
+                Send Message
+              </Button>
+
+            </VStack>
+          </Box>
+
+          {/* Map */}
+          <Box
+            borderRadius="2xl"
+            overflow="hidden"
+            boxShadow="lg"
+            _hover={{ boxShadow: "2xl" }}
+            transition="0.3s"
+          >
+            <iframe
+              title="location"
+              src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3474.16813427947!2d77.72128969430926!3d29.453100315513385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1ssurendra%20nagar%202nd%20phase%20muzaffarnagar!5e0!3m2!1sen!2sin!4v1773060295469!5m2!1sen!2sin"
+              width="100%"
+              height="100%"
+              style={{ border: 0, minHeight: "400px" }}
+              loading="lazy"
+            ></iframe>
+          </Box>
+
+        </SimpleGrid>
+      </Box>
+
     </Box>
   );
 };

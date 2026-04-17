@@ -6,106 +6,95 @@ import {
   Stack,
   Image,
   SimpleGrid,
-  Flex,
-  Icon
+  Icon,
+  HStack
 } from "@chakra-ui/react";
 import { FaUserFriends } from "react-icons/fa";
 import { MdTune } from "react-icons/md";
 import { AiFillCheckCircle } from "react-icons/ai";
 
+const features = [
+  {
+    img: "/src/assets/images/meeting/meeting.jpg",
+    icon: FaUserFriends,
+    title: "Meet Your Relationship Manager",
+    desc: "Connect with our highly experienced advisor who manages your profile."
+  },
+  {
+    img: "/src/assets/images/meeting/meeting1.png",
+    icon: MdTune,
+    title: "Communicate your preferences",
+    desc: "Consultation to understand your expectations in a prospective partner."
+  },
+  {
+    img: "/src/assets/images/meeting/meeting.jpg",
+    icon: AiFillCheckCircle,
+    title: "Choose from handpicked profiles",
+    desc: "We shortlist profiles matching your criteria for offline interactions."
+  }
+];
+
 const ExclusiveService = () => {
   return (
-    <Box bg="gray.50" py={20}>
+    <Box m="0.5rem" py={{ base: 10, md: 20 }}>
       <Container maxW="container.xl">
 
         {/* Heading */}
-        <Stack align="center" gap={3} mb={10}>
+        <Stack gap={3} mb={12} textAlign="center">
           <Text
-            fontSize="4xl" fontWeight="bold" 
-            letterSpacing="wide"
+            fontSize={{ base: "lg", md: "2xl", lg: "4xl" }}
+            fontWeight="bold"
             color="gray.500"
           >
             PERSONALISED MATCH-MAKING SERVICE
           </Text>
 
-          <Heading textAlign="center"fontSize="2xl" fontWeight="bold" >
+          <Heading fontSize={{ base: "xl", md: "2xl" }}>
             Introducing{" "}
             <Text as="span" color="pink.500">
               Exclusive
             </Text>
           </Heading>
-
-      
         </Stack>
 
-        {/* Image */}
-      <Flex justify="center" gap={6} mb={12}>
-  <Box borderRadius="lg" overflow="hidden" maxW="400px">
-    <Image
-      src="/src/assets/images/meeting/meeting.jpg"
-      w="100%"
-      h="100%"
-      objectFit="cover"
-    />
-  </Box>
+        {/* Grid Layout */}
+        <SimpleGrid columns={{ base: 1, sm: 2, md: 3 }} gap={10}>
+          {features.map((item, index) => (
+            <Stack
+              key={index}
+              gap={4}
+              textAlign="center"
+              p={4}
+              borderRadius="lg"
+              bg="white"
+              _hover={{
+                boxShadow: "lg",
+                transform: "translateY(-5px)"
+              }}
+              transition="0.3s"
+            >
+              <Image
+                src={item.img}
+                borderRadius="lg"
+                w="100%"
+                h="auto"
+              />
+<HStack gap={{ base: "0.2rem", md: "0.5rem" }} align="start">
+  <Icon as={item.icon} boxSize={{ base: 5, md: 6 }} color="pink.500" />
 
-  <Box borderRadius="lg" overflow="hidden" maxW="400px">
-    <Image
-      src="/src/assets/images/meeting/meeting1.png"
-      w="100%"
-      h="100%"
-      objectFit="cover"
-    />
-  </Box>
-    <Box borderRadius="lg" overflow="hidden" maxW="450px">
-    <Image
-      src="/src/assets/images/meeting/meeting2.jpg"
-      w="100%"
-      h="100%"
-      objectFit="cover"
-    />
-  </Box>
-</Flex>   
+  <Text
+    fontWeight="bold"
+    fontSize={{ base: "sm", md: "md", lg: "lg" }}
+  >
+    {item.title}
+  </Text>
+</HStack>
 
-        {/* Features */}
-        <SimpleGrid columns={[1, 1, 3]} gap={10}>
-
-          <Flex gap={4}>
-            <Icon as={FaUserFriends} boxSize={6} color="pink.500" />
-            <Box>
-              <Text fontWeight="bold">
-                Meet Your Relationship Manager
-              </Text>
               <Text fontSize="sm" color="gray.600">
-                Connect with our highly experienced advisor who manages your profile.
+                {item.desc}
               </Text>
-            </Box>
-          </Flex>
-
-          <Flex gap={4}>
-            <Icon as={MdTune} boxSize={6} color="pink.500" />
-            <Box>
-              <Text fontWeight="bold">
-                Communicate your preferences
-              </Text>
-              <Text fontSize="sm" color="gray.600">
-                Consultation to understand your expectations in a prospective partner.
-              </Text>
-            </Box>
-          </Flex>
-
-          <Flex gap={4}>
-            <Icon as={AiFillCheckCircle} boxSize={6} color="pink.500" />
-            <Box>
-              <Text fontWeight="bold">
-                Choose from handpicked profiles
-              </Text>
-              <Text fontSize="sm" color="gray.600">
-                We shortlist profiles matching your criteria for offline interactions.
-              </Text>
-            </Box>
-          </Flex>
-
+            </Stack>
+          ))}
         </SimpleGrid>
 
       </Container>

@@ -1,7 +1,19 @@
-import { Box, Flex, Heading, Button } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Heading,
+  Button,
+  IconButton,
+  useDisclosure,
+  VStack,
+} from "@chakra-ui/react";
 import { Link } from "react-router-dom";
+import { RxHamburgerMenu } from "react-icons/rx";
+import { IoMdClose } from "react-icons/io";
 
 const Navbar = () => {
+  const { open, onToggle,onClose  } = useDisclosure();
+
   return (
     <Box
       bg="pink.500"
@@ -15,28 +27,93 @@ const Navbar = () => {
       <Flex justify="space-between" align="center">
         <Heading size="md">Marriage Portfolio</Heading>
 
-        <Flex gap={4}>
+        {/* Desktop Menu */}
+        <Flex gap={4} display={{ base: "none", md: "flex" }}>
           <Link to="/">
-            <Button bgColor="pink.500" _hover={{ textDecoration: "underline" }} color="white">Home</Button>
+            <Button variant="ghost" color="white" _hover={{ textDecoration: "underline" }}>
+              Home
+            </Button>
           </Link>
 
           <Link to="/about">
-            <Button bgColor="pink.500" _hover={{ textDecoration: "underline" }} variant="ghost" color="white">About Us</Button>
+            <Button variant="ghost" color="white" _hover={{ textDecoration: "underline" }}>
+              About Us
+            </Button>
           </Link>
 
           <Link to="/boys">
-            <Button bgColor="pink.500" _hover={{ textDecoration: "underline" }} variant="ghost" color="white">Boys</Button>
+            <Button variant="ghost" color="white" _hover={{ textDecoration: "underline" }}>
+              Boys
+            </Button>
           </Link>
 
           <Link to="/girls">
-            <Button bgColor="pink.500" _hover={{ textDecoration: "underline" }} variant="ghost" color="white">Girls</Button>
+            <Button variant="ghost" color="white" _hover={{ textDecoration: "underline" }}>
+              Girls
+            </Button>
           </Link>
 
           <Link to="/contact">
-            <Button bgColor="pink.500" _hover={{ textDecoration: "underline" }} variant="ghost" color="white">Contact Us</Button>
+            <Button variant="ghost" color="white" _hover={{ textDecoration: "underline" }}>
+              Contact Us
+            </Button>
           </Link>
         </Flex>
+
+        {/* Mobile Hamburger */}
+        <IconButton
+          display={{ base: "flex", md: "none" }}
+          onClick={onToggle}
+          variant="ghost"
+          color="white"
+          aria-label="Toggle Menu"
+        >{open ? <IoMdClose /> : <RxHamburgerMenu/>}</IconButton>
       </Flex>
+
+      {/* Mobile Menu */}
+      {open &&
+       <VStack
+  gap={3}
+  align="start"
+  display={{ md: "none" }}
+  position="absolute"
+  top="100%"
+  left="0"
+  width="100%"
+  bg="pink.500"
+  p={4}
+  zIndex="999"
+>
+          <Link to="/" onClick={onClose}>
+            <Button variant="ghost" w="100%" color="white">
+              Home
+            </Button>
+          </Link>
+
+          <Link to="/about" onClick={onClose}>
+            <Button variant="ghost" w="100%" color="white">
+              About Us
+            </Button>
+          </Link>
+
+          <Link to="/boys" onClick={onClose}>
+            <Button variant="ghost" w="100%" color="white">
+              Boys
+            </Button>
+          </Link>
+
+          <Link to="/girls" onClick={onClose}>
+            <Button variant="ghost" w="100%" color="white">
+              Girls
+            </Button>
+          </Link>
+
+          <Link to="/contact" onClick={onClose}>
+            <Button variant="ghost" w="100%" color="white">
+              Contact Us
+            </Button>
+          </Link>
+        </VStack>}
     </Box>
   );
 };

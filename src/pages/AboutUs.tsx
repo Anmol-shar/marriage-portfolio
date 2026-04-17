@@ -13,13 +13,62 @@ const AboutUs = () => {
   return (
     <Box>
 
+      {/* ✅ Hero Section */}
+      <Box position="relative" w="100%" h={{ base: "40vh", md: "60vh" }}>
+        
+        <Image
+          src="/src/assets/images/meeting/aboutUs.jpg" // change image if needed
+          w="100%"
+          h="100%"
+          objectFit="cover"
+        />
+
+        {/* Overlay */}
+        <Box
+          position="absolute"
+          top="0"
+          left="0"
+          w="100%"
+          h="100%"
+          bg="blackAlpha.400"
+        />
+
+        {/* Centered Text */}
+     <Flex
+  position="absolute"
+  top="0"
+  left="0"
+  w="100%"
+  h="100%"
+  align="center"
+  justify="center"
+>
+  <Stack align="center" gap={3}>
+    <Heading
+      color="white"
+      fontSize={{ base: "3xl", md: "5xl", lg: "6xl" }}
+      fontWeight="bold"
+    >
+      About Us
+    </Heading>
+
+    <Text
+      color="gray.200"
+      fontSize={{ base: "sm", md: "lg" }}
+      fontStyle="italic"
+      mt="1rem"
+    >
+      Your Trusted Partner in Innovation
+    </Text>
+  </Stack>
+</Flex>
+      </Box>
+
+
       {/* Founder Section */}
-
       <Container maxW="container.xl">
-          <Heading  textAlign="center" fontWeight="bold" fontSize="5xl" p={7}>About Us</Heading>
-
         <Flex
-        py="1rem"
+          py="2rem"
           align="center"
           gap={10}
           direction={["column", "column", "row"]}
@@ -31,16 +80,16 @@ const AboutUs = () => {
               borderRadius="lg"
               shadow="xl"
               w="100%"
-              h="400px"
+              h={{ base: "10%", md: "400px" }}
               objectFit="cover"
             />
           </Box>
 
           <Box flex="1">
             <Stack gap={5}>
-              <Heading color="pink.500" >
+              <Heading color="pink.500">
                 Meet Our Founder
-              </Heading>  
+              </Heading>
 
               <Heading size="lg">Abha Sharma</Heading>
 
@@ -66,7 +115,6 @@ const AboutUs = () => {
 
 
       {/* VIP Shaadi Section */}
-
       <Box bg="pink.50" py={20}>
         <Container maxW="container.xl">
 
@@ -108,8 +156,7 @@ const AboutUs = () => {
       </Box>
 
 
-      {/* Weekly / Regular Shaadi Section */}
-
+      {/* Weekly Shaadi Section */}
       <Container maxW="container.xl" py={20}>
 
         <Heading textAlign="center" mb={10}>
@@ -150,11 +197,10 @@ const AboutUs = () => {
 
 
       {/* Experience Section */}
-
       <Box bg="pink.500" color="white" py={20}>
         <Container maxW="container.xl">
 
-          <SimpleGrid columns={[1,2,4]} gap={8} textAlign="center">
+          <SimpleGrid columns={[1, 2, 4]} gap={8} textAlign="center">
 
             <Box>
               <Heading>16+</Heading>
@@ -180,7 +226,6 @@ const AboutUs = () => {
 
         </Container>
       </Box>
-      
 
     </Box>
   );
