@@ -1,35 +1,47 @@
-import { Box, Image, Text, Heading } from "@chakra-ui/react";
+import {
+  Box,
+  Image,
+  Text,
+  Stack,
+} from "@chakra-ui/react";
 
-type Props = {
-  name: string;
-  age: number;
-  profession: string;
-  image: string;
-};
+import type { Profile } from "../data/Profile";
 
-const ProfileCard = ({ name, age, profession, image }: Props) => {
+interface ProfileCardProps {
+  profile: Profile;
+}
+
+const ProfileCard = ({
+  profile,
+}: ProfileCardProps) => {
+
   return (
     <Box
       borderWidth="1px"
-      borderRadius="lg"
+      borderRadius="xl"
       overflow="hidden"
       p={4}
-      textAlign="center"
-      shadow="md"
     >
+
       <Image
-        src={image}
-        borderRadius="full"
-        boxSize="200px "
-        mx="auto"
+        src={profile.image}
+        h="250px"
+        w="100%"
+        objectFit="cover"
       />
 
-      <Heading size="md" mt={3}>
-        {name}
-      </Heading>
+      <Stack mt={4}>
 
-      <Text>Age: {age}</Text>
-      <Text>{profession}</Text>
+        <Text fontWeight="bold">
+          {profile.name}
+        </Text>
+
+        <Text>
+          {profile.location}
+        </Text>
+
+      </Stack>
+
     </Box>
   );
 };
